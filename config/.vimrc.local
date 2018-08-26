@@ -105,13 +105,6 @@ let @q="o{}ioj"
 "javacomplete 自己写的脚本自动编译或运行java程序
 " nnoremap ,jr :! clear && jvr <C-R>=GetFileName()<CR><CR>
 
-nnoremap ,jr iSystem.out.printf("");<ESC>2hi
-
-nmap ,pr :! clear ;echo "以下为java程序运行结果"; javac % && java %:r <CR>
-nmap ,go :! clear ;echo "以下为go程序运行结果"; go run % <CR>
-
-
-
 function! KyoPythonEntry()
     if getfsize(GetFileName()) != -1
         return
@@ -147,8 +140,6 @@ endfunction
 
 nmap ,py :call KyoPythonClassEntry("Test")<CR><CR>
 nmap ,pyd :call KyoPythonClassEntry("")<CR>
-
-nmap ,rr :! clear ;echo -e "\033[31m以下为python程序运行结果\033[0m"; python %<CR>
 
 nnoremap ,pr iSystem.out.printf("");<ESC>2hi
 nmap ,2rr :! clear ;echo -e "\033[31m以下为python2程序运行结果\033[0m";python2 %<CR>
